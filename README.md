@@ -8,7 +8,7 @@
 
 2.在微信开发者工具中打开原文件，开通云服务
 
-<img title="" src="file:///D:/teetalkDiscuss/Reademeimg/2.png" alt="">
+<img title="" src="./Reademeimg/2.png" alt="">
 
 3.将源码中的各个js文件中的云服务id替换为自己的(一般在onload函数中)
 
