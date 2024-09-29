@@ -1,0 +1,28 @@
+<!--pages/uploadinfo/uploadinfo.wxml-->
+<!-- <text>pages/uploadinfo/uploadinfo.wxml</text> -->
+<!-- <van-uploader file-list="{{ fileList }}" bind:after-read="afterRead">
+  <van-button class="uploadinfobutton" icon="plus" type="primary">上传文件</van-button>
+</van-uploader> -->
+<!-- 发表按钮 -->
+<view class="infobutton">
+  <van-button round color="#2CC2C3" type="primary" bindtap="uploadinfo">发表</van-button>
+</view>
+<!-- 文本输入区域 -->
+<view class="card">
+<textarea placeholder="文件描述信息:" class="titletext" maxlength="400" bindinput="titletext"></textarea>
+</view>
+<!-- 文件预览展示 -->
+<block wx:for="{{fileList}}" wx:key="index">
+<view class="filedisplay">
+<view class="text">
+<view>文件类型：{{item.type}}</view>
+<view class="size">文件大小：{{item.size}} Byte</view>
+<view></view>
+<view>文件名称：{{item.name}}</view>
+</view>
+</view>
+</block>
+<!-- 文件上传区域 -->
+<van-uploader class="inputfile" accept="all" max-count="2" deletable="{{ true }}" bind:after-read="afterRead">
+  <van-button class="uploadinfobutton" color="#2CC2C3" icon="plus" type="primary">上传文件</van-button>
+</van-uploader>

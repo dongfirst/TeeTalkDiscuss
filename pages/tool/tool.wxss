@@ -1,0 +1,33 @@
+/* pages/tool/tool.wxss */
+.card{
+  margin-top: 12rpx;
+  display: flex;
+  flex-direction: row; /* 子元素水平排列 */
+  padding: 20rpx; /* 给整个帖子加上一些内边距 */
+  height: 180rpx;
+  background: white;
+  border-radius: 50rpx;
+ box-shadow: 5px 3px 10px 5px  #cdcfcf;
+ }
+
+ .image{
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  padding: 10rpx; /* 内边距 */
+ }
+ .text{
+  margin-top: 0rpx;
+  display: flex;
+  flex-direction: column; /* 子元素水平排列 */
+  padding: 20rpx; /* 给整个帖子加上一些内边距 */
+  height: 180rpx;
+ }
+ .textdesc1{
+  font-size: 18px;
+  
+ }
+
+ .textdesc2{
+  font-size: 14px;
+  margin-top: 10rpx;
+ }

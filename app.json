@@ -1,22 +1,57 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/user/user",
+    "pages/tool/tool",
+    "pages/info/info",
+    "pages/introduce/introduce",
+    "pages/bugback/bugback",
+    "pages/talkmodel/talkmodel",
+    "pages/uploadpost/uploadpost",
+    "pages/uploadinfo/uploadinfo",
+    "pages/postdetail/postdetail",
+    "pages/infodetail/infodetail",
+    "pages/newcomments/newcomments",
+    "pages/selfpost/selfpost",
+    "pages/modifyinfo/modifyinfo",
+    "pages/alluserinfo/alluserinfo",
+    "pages/setting/setting"
   ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/index.png",
+        "selectedIconPath": "image/index-active.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tool/tool",
+        "iconPath": "image/tool.png",
+        "selectedIconPath": "image/tool-active.png",
+        "text": "工具"
+      },
+      {
+        "pagePath": "pages/info/info",
+        "iconPath": "image/infonew.png",
+        "selectedIconPath": "image/infonew-active.png",
+        "text": "资料"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "iconPath": "image/user.png",
+        "selectedIconPath": "image/user-active.png",
+        "text": "用户"
+      }
+    ]
+  },
   "window": {
-    "navigationBarTextStyle": "black",
-    "navigationStyle": "custom"
+    "navigationBarTitleText": "青言Discuss",
+    "navigationBarBackgroundColor": "#2CC2C3",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true,
+    "backgroundColor": "#efefef"
   },
-  "style": "v2",
-  "renderer": "skyline",
-  "rendererOptions": {
-    "skyline": {
-      "defaultDisplayBlock": true,
-      "disableABTest": true,
-      "sdkVersionBegin": "3.0.0",
-      "sdkVersionEnd": "15.255.255"
-    }
-  },
-  "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

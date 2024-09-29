@@ -1,0 +1,73 @@
+/* pages/talkmodel/talkmodel.wxss */
+/* 容器 */
+.talkmodel{
+  margin-top: 12rpx;
+  height: 1250rpx;
+  display: flex;
+  flex-direction: column; /* 子元素垂直排列 */
+  padding: 20rpx; /* 给整个帖子加上一些内边距 */
+}
+/* 对话区域 */
+.dialogarea{
+  display: flex;
+  flex-direction: column; /* 子元素垂直排列 */
+}
+/* 单体 */
+.single{
+  display: flex;
+  flex-direction: row; /* 子元素水平排列 */
+  margin-bottom: 15rpx;
+}
+/* 用户头像 */
+.userimg{
+  margin-top:5rpx ;
+  width: 90rpx; /* 图片宽度 */
+  height: 90rpx; /* 图片高度 */
+}
+.userimg image {
+  width: 100%; /* 图片宽度 */
+  height: 100%; /* 图片高度 */
+  border-radius: 50%; /* 圆形头像 */
+}
+/*  */
+.userbig{
+  width: 580rpx;
+  margin-top:15rpx ;
+  margin-left: 20rpx;
+  background: white;
+  border-radius: 50rpx;
+  box-shadow: 10px 10px 15px 5px  #cdcfcf;
+}
+/* 用户内容 */
+.usertext{
+  
+  margin-top: 15rpx;
+  margin-left: 15rpx;
+  margin-bottom: 15rpx;
+  text-align: left; /* 文字左对齐 */
+  font-size: 32rpx;        /* 字体大小 */
+  color: #333;             /* 字体颜色 */
+  font-weight: 500;        /* 字体粗细 */
+}
+/* 滚动框 */
+.list-container {
+  flex: 1; /* 占据剩余空间 */
+  overflow-y: auto; /* 允许垂直滚动 */
+  padding: 5rpx; /* 添加一些内边距 */
+}
+/* 输入框的样式 */
+.card{
+  position: fixed;
+  bottom: 120rpx;
+  width: 98%;
+  left: 1%;
+  height: 50rpx;
+  background: white;
+  box-shadow: 10px 10px 15px 10px  #cdcfcf;
+ }
+/* 输入框文字的样式 */
+.userinput{
+  position: fixed; /* 使用绝对定位 */
+  top: 20rpx;         /* 向下移动 20rpx */
+  left: 180rpx;        /* 向右移动 10rpx */
+}

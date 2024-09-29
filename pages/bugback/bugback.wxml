@@ -1,0 +1,13 @@
+<!--pages/bugback/bugback.wxml-->
+<!--pages/uploadpost/uploadpost.wxml-->
+<!-- 发表按钮 -->
+<view class="postbutton">
+  <van-button round color="#2CC2C3" type="primary" bindtap="uploadpost">反馈</van-button>
+</view>
+<!-- 文本输入区域 -->
+<view class="card">
+<textarea placeholder="描述遇到的问题，可以附带截图哦~" class="inputtext" maxlength="400" bindinput="inputtext"></textarea>
+</view>
+
+<!-- 图片上传区域 -->
+<van-uploader class="inputimg" file-list="{{ fileList }}" preview-size="150px" max-count="1" deletable="{{ true }}" bind:after-read="afterRead" />

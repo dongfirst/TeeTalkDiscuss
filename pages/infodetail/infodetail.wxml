@@ -1,0 +1,20 @@
+<!--pages/infodetail/infodetail.wxml-->
+<!-- 发表按钮 -->
+<!-- 文本输入区域 -->
+<view class="card">
+<view class="filetexttitle">点击文件相应卡片可以预览文档</view>
+<view class="filetext">文件描述:{{infodetail.titletext}}</view>
+</view>
+<!-- 文件预览展示 -->
+<block wx:for="{{infodetail.fileList}}" wx:key="index">
+<view class="filedisplay" bindtap="todocx" data-id="{{infodetail.fileID[index]}}">
+<view class="text">
+<view>文件类型：{{item.type}}</view>
+<view class="size">文件大小：{{item.size}} Byte</view>
+<view></view>
+<view>文件名称：{{item.name}}</view>
+</view>
+</view>
+</block>
+<!-- 文件上传区域 -->
+  <van-button class="inputfile" color="#2CC2C3" icon="down" type="primary" bindtap="downloadfile">下载文件</van-button>

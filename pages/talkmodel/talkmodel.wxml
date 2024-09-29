@@ -1,0 +1,66 @@
+<!-- 容器 -->
+<view class="talkmodel">
+<!-- 对话区域 -->
+<!-- 滚动 -->
+<scroll-view class="list-container" scroll-y="true">
+<view class="dialogarea"></view>
+<block wx:for="{{dialog}}" wx:key="index">
+<!-- 显示区 -->
+<view wx:if="{{item.role=='user'}}" class="cardinput"> 
+
+  <view class="single">
+  
+    <view class="userimg">
+      <image src="{{userimg}}"></image>
+    </view>
+    
+    <view class="userbig">
+      <view class="usertext">{{item.content}}</view>
+    </view>
+
+  </view>
+
+</view>
+
+<!-- 机器回复 -->
+<view wx:if="{{item.role=='assistant'}}" class="cardinput">
+
+  <view class="single">
+  
+    <view class="userimg">
+      <image src="/image/助手小青.jpg"></image>
+    </view>
+    
+    <view class="userbig">
+      <view class="usertext">{{item.content}}</view>
+    </view>
+
+  </view>
+
+    <!-- <view class="userimg">
+    <image class="userinfo_avatar" src="/image/助手小青.jpg"></image>
+    </view>
+    <text class="userinput">{{item.content}}</text> -->
+</view>
+
+</block>
+<!-- 滚动尾 -->
+</scroll-view>
+<!-- 容器尾 -->
+</view>
+
+<!-- 输入框 -->
+<view class="card">
+<van-field
+  value="{{ value }}"
+  placeholder="快输入你的问题吧~"
+  clearable
+  border="{{ false }}"
+  extra-event-params
+  bind:change="onChange"
+  use-button-slot
+>
+<!-- 输入框的发送 -->
+  <van-button slot="button" round color="#2CC2C3" icon="other-pay" size="small" bindtap="sendinfo"/>
+  </van-field>
+</view>

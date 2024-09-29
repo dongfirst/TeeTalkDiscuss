@@ -1,0 +1,15 @@
+<!--pages/uploadpost/uploadpost.wxml-->
+<!-- 发表按钮 -->
+<view class="postbutton">
+  <van-button round color="#2CC2C3" type="primary" bindtap="uploadpost">发表</van-button>
+</view>
+<!-- 文本输入区域 -->
+<view class="card">
+<textarea placeholder="图片变形不用担心，发布后会正常显示~输入你想分享的内容吧~" class="inputtext" maxlength="400" bindinput="inputtext"></textarea>
+</view>
+<!-- 选择框 -->
+<view class="choose">
+<van-checkbox value="{{ checked }}" bind:change="onChange">是否匿名发布</van-checkbox>
+</view>
+<!-- 图片上传区域 -->
+<van-uploader class="inputimg" file-list="{{ fileList }}" preview-size="150px" max-count="1" deletable="{{ true }}" bind:after-read="afterRead" />

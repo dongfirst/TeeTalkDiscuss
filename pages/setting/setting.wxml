@@ -1,0 +1,4 @@
+<!--pages/setting/setting.wxml-->
+<view class="buttom">
+      <van-cell title="申请成为管理员" size="large" icon="manager-o" is-link border="{{false}}" bindtap="tocontrol"/>
+</view>

@@ -1,0 +1,39 @@
+<!--pages/user/user.wxml-->
+<view class="card">
+<view class="header">
+    <image wx:if="{{userInfo.avatarUrl}}" class="userinfo_avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="header_right">
+        <view wx:if="{{userInfo.nickName}}" class="userinfo_nickname">{{userInfo.nickName}}</view>
+    </view>
+</view>
+</view>
+
+<van-divider />
+<!-- 下部功能区 -->
+<view class="buttom">
+      <van-cell wx:if="{{userInfo.introduction}}" title="自我介绍" size="large"  label="{{userInfo.introduction}}"/>
+      <van-cell wx:if="{{userInfo.gender}}" title="性别" size="large" value="{{userInfo.gender}}" is-link bindtap="showPopup" />
+      <van-cell wx:if="{{userInfo.grade}}" title="年级" size="large" value="{{userInfo.grade}}" is-link bindtap="showPopup2" />
+      <van-cell wx:if="{{userInfo.identity}}" title="身份" size="large" value="{{userInfo.identity}}"  />
+</view>
+<!-- 弹出层 -->
+<van-popup show="{{ show }}" round position="bottom">
+  <van-cascader
+    wx:if="{{ show }}"
+    value="{{ cascaderValue }}"
+    options="{{ options }}"
+    bind:close="onClose"
+    bind:finish="onFinish"
+  />
+</van-popup>
+
+<van-popup show="{{ show2 }}" round position="bottom">
+  <van-cascader
+    wx:if="{{ show2 }}"
+    value="{{ cascaderValue2 }}"
+    options="{{ options2 }}"
+    bind:close="onClose2"
+    bind:finish="onFinish2"
+  />
+</van-popup>
+    

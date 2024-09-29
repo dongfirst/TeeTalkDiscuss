@@ -1,0 +1,66 @@
+<!--pages/user/user.wxml-->
+<view class="card">
+<view class="header">
+    <!-- 未登陆 -->
+    <image wx:if="{{!userInfo.avatarUrl}}" bindtap="closeTank" class="userinfo_avatar" src="/image/no_login.png"></image>
+    <view wx:if="{{!userInfo.avatarUrl}}" bindtap="closeTank" class="userinfo_nickname">点击登陆</view>
+    <!-- 已登陆 -->
+    <image wx:if="{{userInfo.avatarUrl}}" bindtap="tomodifyinfo" class="userinfo_avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view wx:if="{{userInfo.avatarUrl}}" class="header_right">
+        <view class="userinfo_nickname">{{userInfo.nickName}}</view>
+    </view>
+</view>
+<!-- 中部交互图标按钮 -->
+  <van-grid border="{{false}}" column-num="3">
+      <van-grid-item icon-color="#2CC2C3" icon="comment-o" text="帖子" bindtap="selfpost" />
+      <van-grid-item icon-color="#2CC2C3" icon="label-o" info="{{newcomments}}" text="评论" bindtap="tonewcomments" />
+      <!-- <van-grid-item icon-color="#2CC2C3" icon="other-pay" text="消息" bindtap="undefined" />
+      <van-grid-item icon-color="#2CC2C3" icon="friends-o" text="好友" bindtap="undefined" /> -->
+      <van-grid-item icon-color="#2CC2C3" icon="setting-o" text="设置" bindtap="tosetting" />
+    </van-grid>
+
+</view>
+<!-- 头像昵称基本信息弹框 -->
+<view>
+    <view class="userInfo_tank_bg" bindtap="closeTank" wx:if="{{userInfo_tank}}"></view>
+    <view class="userInfo_tank {{userInfo_tank?'transfromjoin':'transfromout'}}">
+        <view class="tank_title">
+            <text>申请获取您的头像、昵称</text>
+        </view>
+        <view class="tank_content">
+            <text>头像：</text>
+            <button class="avatar_button" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">
+                <image class="avatar_url" src="{{avatarUrl}}"></image>
+                <view class="pos_photo">
+                    <text class="iconfont icon-paizhao"></text>
+                </view>
+            </button>
+        </view>
+        <view class="tank_content">
+            <text>昵称：</text>
+            <input form-type='submit' bindblur="getNickName" placeholder="请输入昵称" type="nickname" />
+        </view>
+        <view class="confirm_button">
+            <view>
+                <button bindtap="closeTank">拒绝</button>
+            </view>
+            <view>
+                <button bindtap="submit" type="primary">允许</button>
+            </view>
+        </view>
+    </view>
+</view>
+
+
+
+
+<van-divider />
+<!-- 下部功能区 -->
+<view class="buttom">
+      <van-cell title="修改资料" size="large" icon="manager-o" is-link border="{{false}}" bindtap="tomodifyinfo"/>
+      <van-cell title="小程序介绍" size="large" icon="more-o" is-link border="{{false}}" bindtap="toAboutUs" />
+      <van-cell title="联系作者&反馈bug" size="large" icon="chat-o" is-link border="{{false}}" bindtap="talktoauthor" />
+      <van-cell title="退出登录" size="large" icon="revoke" is-link border="{{false}}" bindtap="tuichu" />
+</view>
+
+    

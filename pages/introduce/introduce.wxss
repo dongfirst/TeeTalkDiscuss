@@ -1,0 +1,66 @@
+/* pages/introduce/introduce.wxss */
+.title {
+  font-size: 32rpx;        /* 字体大小 */
+  color: black;             /* 字体颜色 */
+  font-weight: 550;        /* 字体粗细 */
+  margin-bottom: 20rpx;    /* 底部外边距 */
+  text-align: left;      /* 文本水平居中 */
+  padding-top: 10rpx;      /* 上内边距 */
+  padding-bottom: 10rpx;   /* 下内边距 */
+  padding-left: 20rpx;     /* 左内边距 */
+  padding-right: 20rpx;    /* 右内边距 */
+}
+.content {
+  font-size: 28rpx;        /* 字体大小 */
+  color: #333;             /* 字体颜色 */
+  font-weight: 550;        /* 字体粗细 */
+  margin-bottom: 0rpx;    /* 底部外边距 */
+  text-align: left;      /* 文本水平居中 */
+  padding-top: 5rpx;      /* 上内边距 */
+  padding-bottom: 0rpx;   /* 下内边距 */
+  padding-left: 20rpx;     /* 左内边距 */
+  padding-right: 20rpx;    /* 右内边距 */
+}
+.content2 {
+  font-size: 28rpx;        /* 字体大小 */
+  color: #333;             /* 字体颜色 */
+  font-weight: 550;        /* 字体粗细 */
+  margin-bottom: 0rpx;    /* 底部外边距 */
+  text-align: left;      /* 文本水平居中 */
+  padding-top: 5rpx;      /* 上内边距 */
+  padding-bottom: 0rpx;   /* 下内边距 */
+  padding-left: 140rpx;     /* 左内边距 */
+  padding-right: 20rpx;    /* 右内边距 */
+}
+.card{
+  margin-top: 20rpx; /* 添加上边距 */
+/*卡片的宽度*/  
+width: 96%;
+/*左外边距，这里代表距离最左边的距离*/
+ margin-left: 2%;
+/*卡片的高度。*/
+ height: 310rpx;
+/*背景色，可以自己更换*/
+ background: white;
+/* radius是卡片的边框的圆润c程度
+   shadow是阴影效果，四个值分别为水平阴影，垂直阴影，模糊距离，阴影的颜色。
+*/
+ border-radius: 10rpx;
+ box-shadow: 5px 5px 15px 5px  #cdcfcf;
+ }
+ .card2{
+  margin-top: 20rpx; /* 添加上边距 */
+/*卡片的宽度*/  
+width: 96%;
+/*左外边距，这里代表距离最左边的距离*/
+ margin-left: 2%;
+/*卡片的高度。*/
+ height: 710rpx;
+/*背景色，可以自己更换*/
+ background: white;
+/* radius是卡片的边框的圆润c程度
+   shadow是阴影效果，四个值分别为水平阴影，垂直阴影，模糊距离，阴影的颜色。
+*/
+ border-radius: 10rpx;
+ box-shadow: 5px 5px 15px 5px  #cdcfcf;
+ }

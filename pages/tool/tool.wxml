@@ -1,0 +1,15 @@
+<!--pages/tool/tool.wxml-->
+<!-- 语言大模型工具卡片 -->
+<view class="card" bindtap="talkmodel">
+  <van-image
+  round
+  width="5rem"
+  height="5rem"
+  src="/image/助手小青.jpg"
+  class="image"
+/>
+<view class="text">
+<view class="textdesc1">助手小青</view>
+<view class="textdesc2">可查询各科目相关知识点</view>
+</view>
+</view>

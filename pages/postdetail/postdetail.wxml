@@ -1,0 +1,64 @@
+<!--pages/postdetail/postdetail.wxml-->
+<!-- 容器 -->
+<view class="postdetail">
+  <!-- 滚动 -->
+  <scroll-view class="list-container" scroll-y="true">
+<!-- 顶栏，头像和昵称 -->
+  <view class="top">
+    <view class="postuserimg" bindtap="toalluserinfo" data-id="{{postdetail._openid}}">
+    <image src="{{postdetail.avatarUrl}}"></image>
+    </view>
+    <view class="postusername">{{postdetail.nickName}}</view>
+  </view>
+  <!-- 中部，内容加图像 -->
+  <view class="middle">
+    <view class="posttext">{{postdetail.inputtext}}</view>
+    <view class="postimg">
+    <image src="{{postdetail.fileID}}" mode="heightFix"></image>
+    </view>
+  </view>
+  <!-- 分隔符 -->
+  <van-divider customStyle="color: #2CC2C3; border-color: #2CC2C3;" />
+
+  <!-- 刷新按钮 -->
+  <van-button class="freshbutton" round color="#2CC2C3" icon="replay" type="info" bindtap="freshtap"></van-button>
+
+  <!-- 底部评论区 -->
+  <view class="down">
+  <block wx:for="{{postdetail.comments}}" wx:key="index">
+  <view class="single">
+  
+    <view class="commentimg">
+      <image src="{{item.avatarUrl}}"></image>
+    </view>
+    
+    <view class="commentbig">
+      <view class="commentname">{{item.nickName}}</view>
+      <view class="comment">{{item.commenttext.value}}</view>
+    </view>
+  
+  </view>
+  </block>
+
+  </view>
+</scroll-view>
+</view>
+<!-- <view class="divider"></view> -->
+<!-- 发布评论 -->
+<van-cell-group class="commentinput">
+  <van-field
+    value="{{ value }}"
+    placeholder="善于结善缘，恶语伤人心~"
+    clearable
+    border="{{ false }}"
+    extra-event-params
+    bind:change="onChange"
+    maxlength="50"
+    auto-focus="{{true}}"
+    use-button-slot
+  >
+  <van-button slot="button" size="small" round color="#2CC2C3" type="primary" bindtap="uploadinfo">
+      发送评论
+    </van-button>
+  </van-field>
+</van-cell-group>

@@ -1,11 +1,12 @@
 {
   "appid": "wxef172f369b9da705",
   "compileType": "miniprogram",
-  "libVersion": "3.6.0",
+  "libVersion": "3.5.5",
   "packOptions": {
     "ignore": [],
     "include": []
   },
+  "cloudfunctionRoot": "cloud/",
   "setting": {
     "coverView": true,
     "es6": true,
@@ -13,12 +14,19 @@
     "minified": true,
     "enhance": true,
     "showShadowRootInWxmlPanel": true,
-    "packNpmRelationList": [],
+    "packNpmManually": true,
+    "packNpmRelationList": [
+      {
+        "packageJsonPath": "./package",
+        "miniprogramNpmDistDir": "./"
+      }
+    ],
     "babelSetting": {
       "ignore": [],
       "disablePlugins": [],
       "outputPath": ""
-    }
+    },
+    "uglifyFileName": true
   },
   "condition": {},
   "editorSetting": {

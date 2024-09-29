@@ -1,0 +1,19 @@
+<!--pages/newcomments/newcomments.wxml-->
+<!-- 滚动 -->
+<scroll-view class="list-container" scroll-y="true">
+<!-- 列表渲染单体 -->
+<block wx:for="{{postdetail}}" wx:key="index">
+<view class="postlist" bindtap="topostdetail" data-id="{{item._id}}">
+  <view class="top">
+  {{item.inputtext}}
+  </view>
+  <view class="down">
+    <view class="posttime">{{item.time}}</view>
+    <view class="userimg">
+    <image src="{{item.avatarUrl}}"></image>
+    </view>
+    <view class="username">{{item.nickName}}</view>
+  </view>
+</view>
+</block>
+</scroll-view>

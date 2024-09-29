@@ -1,0 +1,44 @@
+/* pages/bugback/bugback.wxss */
+/* pages/uploadpost/uploadpost.wxss */
+/* 发表按钮 */
+.postbutton{
+  display:flex;
+  flex-direction:row;
+  justify-content: flex-end;
+  margin-top: 20rpx;
+  margin-right: 20rpx;
+}
+
+/* 文本输入区域 */
+.card{
+  margin-top: 12rpx; /* 添加上边距 */
+/*卡片的宽度*/  
+width: 98%;
+/*左外边距，这里代表距离最左边的距离*/
+ margin-left: 1%;
+/*卡片的高度。*/
+ height: 350rpx;
+/*背景色，可以自己更换*/
+ background: white;
+/* radius是卡片的边框的圆润c程度
+   shadow是阴影效果，四个值分别为水平阴影，垂直阴影，模糊距离，阴影的颜色。
+*/
+ border-radius: 10rpx;
+ box-shadow: 5px 10px 10px 5px  #cdcfcf;
+ }
+ /* 文本输入的样式 */
+ .inputtext{
+  padding-top: 15rpx;      /* 上内边距 */
+  padding-left: 25rpx;     /* 左内边距 */
+  height: 300rpx;
+  width: 94%;
+ }
+
+ /* 图片输入框的样式 */
+ .inputimg{
+  display:flex;
+  flex-direction:row;
+  /* justify-content: flex-end; */
+  margin-top: 100rpx;
+  margin-left: 20rpx;
+ }

@@ -1,0 +1,20 @@
+<!--pages/user/user.wxml-->
+<view class="card">
+<view class="header">
+    <image wx:if="{{userInfo.avatarUrl}}" class="userinfo_avatar" src="{{userInfo.avatarUrl}}"></image>
+    <view class="header_right">
+        <view wx:if="{{userInfo.nickName}}" class="userinfo_nickname">{{userInfo.nickName}}</view>
+    </view>
+</view>
+</view>
+
+<van-divider />
+<!-- 下部功能区 -->
+<view class="buttom">
+      <van-cell wx:if="{{userInfo.introduction}}" title="自我介绍" size="large"  label="{{userInfo.introduction}}"/>
+      <van-cell wx:if="{{userInfo.gender}}" title="性别" size="large" value="{{userInfo.gender}}" />
+      <van-cell wx:if="{{userInfo.grade}}" title="年级" size="large" value="{{userInfo.grade}}"   />
+      <van-cell wx:if="{{userInfo.identity}}" title="身份" size="large" value="{{userInfo.identity}}"  />
+</view>
+
+    

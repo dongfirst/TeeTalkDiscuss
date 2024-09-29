@@ -1,7 +1,56 @@
 <!--index.wxml-->
-<navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<scroll-view class="scrollarea" scroll-y type="list">
+
+<!-- 导航栏 -->
+<!-- <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar> -->
+
+<!-- 可滚动的区域 -->
+<!-- <scroll-view class="scrollarea" scroll-y type="list">
   <view class="container">
     Weixin
   </view>
+</scroll-view> -->
+
+<!-- 编写首页 -->
+<!-- 搜索框 -->
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+>
+  <view slot="action" bind:tap="onSearch">搜索</view>
+</van-search>
+<!-- 滚动 -->
+<scroll-view class="list-container" scroll-y="true">
+<!-- 列表渲染单体 -->
+<block wx:for="{{actionList}}" wx:key="index">
+<view class="postlist" bindtap="topostdetail" data-id="{{item._id}}">
+  <view class="top">
+  {{item.inputtext}}
+  </view>
+  <view class="down">
+    <view class="posttime">{{item.time}}</view>
+    <view class="userimg">
+    <image src="{{item.avatarUrl}}"></image>
+    </view>
+    <view class="username">{{item.nickName}}</view>
+  </view>
+</view>
+</block>
 </scroll-view>
+
+<!-- 刷新按钮 -->
+<van-button class="freshbutton" round color="#2CC2C3" icon="replay" type="info" bindtap="freshtap"></van-button>
+
+<!-- 弹出框 -->
+
+<!-- 弹出框按钮 -->
+<van-button class="fabubutton" round color="#2CC2C3" icon="add-o" type="info" bindtap="fabutap"></van-button>
+<!-- <van-grid-item class="fabubutton" icon-color="#2CC2C3" icon="add-o" text="发布" bindtap="fabutap" /> -->
+<!-- 弹出的选项卡 -->
+<van-action-sheet
+  show="{{ show }}"
+  actions="{{ actions }}"
+  bind:close="onClose"
+  bind:select="onSelect"
+/>

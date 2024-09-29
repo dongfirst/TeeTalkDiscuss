@@ -1,0 +1,66 @@
+/* pages/newcomments/newcomments.wxss */
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  flex: 1;
+  overflow-y: hidden;
+}
+/* 发布按钮 */
+.fabubutton {
+  position: fixed;
+  bottom: 65px;       /* 距离顶部的距离 */
+  right: 20px;     /* 距离右侧的距离 */
+  display: flex;
+}
+
+/* 列表渲染单体 */
+/* 容器 */
+.postlist {
+  margin-top: 12rpx;
+  display: flex;
+  flex-direction: column; /* 子元素垂直排列 */
+  padding: 20rpx; /* 给整个帖子加上一些内边距 */
+  height: 200rpx;
+  background: white;
+  border-radius: 50rpx;
+ box-shadow: 5px 3px 10px 5px  #cdcfcf;
+}
+
+.top {
+  flex: 1; /* 占据剩余空间 */
+  padding: 10rpx; /* 内边距 */
+}
+
+.down {
+  display: flex;
+  align-items: center; /* 垂直居中对齐 */
+  padding: 10rpx; /* 内边距 */
+}
+.posttime{
+  margin-right: 160rpx; /* 图片右侧间距 */
+}
+.userimg {
+  width: 60rpx; /* 图片宽度 */
+  height: 60rpx; /* 图片高度 */
+  margin-right: 20rpx; /* 图片右侧间距 */
+}
+
+.userimg image {
+  width: 100%; /* 图片宽度 */
+  height: 100%; /* 图片高度 */
+  border-radius: 50%; /* 圆形头像 */
+}
+
+.username {
+  text-align: left; /* 文字左对齐 */
+  margin-bottom: 6rpx;
+}
+/* 滚动框 */
+.list-container {
+  flex: 1; /* 占据剩余空间 */
+  overflow-y: auto; /* 允许垂直滚动 */
+  padding: 20rpx; /* 添加一些内边距 */
+}

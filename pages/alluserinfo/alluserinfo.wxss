@@ -1,0 +1,174 @@
+.header {
+  width: 90%;
+  display: flex;
+  padding: 50rpx 25rpx;
+  align-items: center;
+  background: white;
+}
+/* 头像框样式 */
+.userinfo_avatar {
+  border-radius: 128rpx;
+  width: 128rpx;
+  height: 128rpx;
+  margin-right: 30rpx;
+}
+/* 昵称样式 */
+.userinfo_nickname {
+  font-size: 36rpx;
+  margin-bottom: 5rpx;
+}
+
+.tuichu {
+  font-size: 30rpx;
+  color: gray;
+}
+
+/* 授权弹窗 */
+.userInfo_tank_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.3;
+  background: #000;
+  z-index: 666;
+}
+
+.userInfo_tank {
+  position: fixed;
+  bottom: 0;
+  background-color: white;
+  width: 100%;
+  border-radius: 30rpx 30rpx 0 0;
+  padding: 30rpx;
+  box-sizing: border-box;
+  z-index: 999999;
+}
+
+.transfromjoin {
+  transition: all 0.3s;
+  margin-bottom: 0;
+}
+
+.transfromout {
+  transition: all 0.3s;
+  margin-bottom: -700rpx;
+}
+
+.avatar_url {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+.tank_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  height: 100rpx;
+}
+
+.tank_content text {
+  color: #787376;
+}
+
+.tank_content input {
+  width: 80%;
+  text-align: right;
+}
+
+.tank_title {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 30rpx;
+  font-weight: 700;
+}
+
+.confirm_button {
+  display: flex;
+  margin: 50rpx 0;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: center;
+}
+
+.confirm_button view {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.pos_photo {
+  position: absolute;
+  bottom: 0;
+  right: -10rpx;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pos_photo text {
+  font-size: 25rpx !important;
+  color: #fff;
+}
+
+.avatar {
+  position: relative;
+}
+
+.confirm_button view button {
+  width: 90%;
+}
+
+.default_button {
+  width: none !important;
+  margin: 0 !important;
+  padding: 10rpx 20rpx !important;
+  width: 260rpx !important;
+  font-weight: 600 !important;
+  font-size: 32rpx !important;
+}
+
+.avatar_button {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 80rpx !important;
+  height: 80rpx !important;
+  border-radius: 50% !important;
+  font-size: 32rpx !important;
+  overflow: visible !important;
+}
+
+.card{
+  margin-top: 12rpx; /* 添加上边距 */
+/*卡片的宽度*/  
+width: 98%;
+/*左外边距，这里代表距离最左边的距离*/
+ margin-left: 1%;
+/*卡片的高度。*/
+ height: 250rpx;
+/*背景色，可以自己更换*/
+ background: white;
+/* radius是卡片的边框的圆润c程度
+   shadow是阴影效果，四个值分别为水平阴影，垂直阴影，模糊距离，阴影的颜色。
+*/
+ border-radius: 10rpx;
+ box-shadow: 5px 5px 15px 5px  #cdcfcf;
+ }
+ .buttom{
+  margin-top: 25rpx; /* 添加上边距 */
+/*卡片的宽度*/  
+width: 96%;
+/*左外边距，这里代表距离最左边的距离*/
+ margin-left: 2%;
+/*卡片的高度。*/
+ height: 350rpx;
+/*背景色，可以自己更换*/
+ background: white;
+ }
